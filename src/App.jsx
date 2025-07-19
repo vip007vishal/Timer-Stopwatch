@@ -8,17 +8,7 @@ const App = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200 text-gray-800 font-sans">
       {/* Navbar */}
-      <nav className="bg-white shadow-md px-6 py-4 flex justify-between items-center sticky top-0 z-50">
-        <div className="text-xl font-bold text-blue-600 flex items-center gap-2">
-          <i className="fas fa-clock"></i>
-          <span>Timer & Stopwatch</span>
-        </div>
-        <ul className="flex space-x-6 font-medium">
-          <li><a href="index.html" className="hover:text-blue-600">Home</a></li>
-          <li><a href="Tools.html" className="hover:text-blue-600">Tools</a></li>
-          <li><a href="Login.html" className="hover:text-blue-600">Login</a></li>
-        </ul>
-      </nav>
+
 
       {/* Main Content */}
       <main className="flex flex-col md:flex-row justify-center items-center gap-12 p-10">
