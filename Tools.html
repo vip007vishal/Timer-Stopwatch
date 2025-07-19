@@ -1,13 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Timer Stopwatch</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="navbar.css">
+  <title>Timer & Stopwatch</title>
+  <link rel="stylesheet" href="/navbar.css" />
   <style>
     * {
       margin: 0;
@@ -24,68 +22,68 @@
     }
 
     /* Navbar Base */
-.navbar {
-    position: fixed;
-    top: 0%;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+    .navbar {
+      position: fixed;
+      top: 0%;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-/* Logo */
-.logo {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #2c3e50;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+    /* Logo */
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #2c3e50;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-.logo i {
-    color: #0077ff;
-}
+    .logo i {
+      color: #0077ff;
+    }
 
-/* Links */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
+    /* Links */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
 
-.nav-links li a {
-    text-decoration: none;
-    color: #2c3e50;
-    font-weight: 500;
-    position: relative;
-    padding: 5px 0;
-    transition: color 0.3s ease;
-}
+    .nav-links li a {
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: 500;
+      position: relative;
+      padding: 5px 0;
+      transition: color 0.3s ease;
+    }
 
-.nav-links li a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 0%;
-    background-color: #0077ff;
-    transition: width 0.4s ease;
-}
+    .nav-links li a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0%;
+      background-color: #0077ff;
+      transition: width 0.4s ease;
+    }
 
-.nav-links li a:hover {
-    color: #0077ff;
-}
+    .nav-links li a:hover {
+      color: #0077ff;
+    }
 
-.nav-links li a:hover::after {
-    width: 100%;
-}
+    .nav-links li a:hover::after {
+      width: 100%;
+    }
 
     /* Responsive adjustments */
     @media (max-width: 768px) {
@@ -108,7 +106,7 @@
       <span>Timer & Stopwatch</span>
     </div>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="https://vip007vishal.github.io/Timer-Stopwatch/Set.html">Home</a></li>
       <li><a href="https://vip007vishal.github.io/Timer-Stopwatch/Tools.html">Tools</a></li>
       <li><a href="https://vip007vishal.github.io/Timer-Stopwatch/Login.html">Login</a></li>
     </ul>
