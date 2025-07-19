@@ -1,49 +1,42 @@
-// src/Timer.jsx
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Timer() {
-  const [timeLeft, setTimeLeft] = useState(60); // in seconds
+  const [time, setTime] = useState(0);
   const [running, setRunning] = useState(false);
 
   useEffect(() => {
     let interval;
-    if (running && timeLeft > 0) {
+    if (running && time > 0) {
       interval = setInterval(() => {
-        setTimeLeft((prev) => prev - 1);
+        setTime((t) => t - 1);
       }, 1000);
     } else {
       clearInterval(interval);
     }
     return () => clearInterval(interval);
-  }, [running, timeLeft]);
+  }, [running, time]);
 
-  const format = (sec) => {
-    const pad = (n) => n.toString().padStart(2, "0");
-    const minutes = Math.floor(sec / 60);
-    const seconds = sec % 60;
-    return `${pad(minutes)}:${pad(seconds)}`;
+  const start = () => setRunning(true);
+  const stop = () => setRunning(false);
+  const reset = () => {
+    setRunning(false);
+    setTime(0);
   };
 
   return (
-    <div className="bg-white shadow-xl rounded-2xl p-6 w-full max-w-md mx-auto text-center space-y-6">
-      <h2 className="text-2xl font-bold text-green-600">Countdown Timer</h2>
-      <div className="text-4xl font-mono">{format(timeLeft)}</div>
-      <div className="space-x-4">
-        <button
-          onClick={() => setRunning(!running)}
-          className="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
-        >
-          {running ? "Pause" : "Start"}
-        </button>
-        <button
-          onClick={() => {
-            setRunning(false);
-            setTimeLeft(60);
-          }}
-          className="px-6 py-2 bg-gray-300 rounded-lg hover:bg-gray-400"
-        >
-          Reset
-        </button>
+    <div className="box">
+      <h2>Timer</h2>
+      <div className="time">{time}s</div>
+      <input
+        type="number"
+        placeholder="Set seconds"
+        onChange={(e) => setTime(Number(e.target.value))}
+        disabled={running}
+      />
+      <div className="buttons">
+        <button onClick={start}>Start</button>
+        <button onClick={stop}>Stop</button>
+        <button onClick={reset}>Reset</button>
       </div>
     </div>
   );

@@ -1,30 +1,22 @@
-import React from 'react';
-import Timer from './Timer';
-import Stopwatch from './Stopwatch';
-import './index.css';
+import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import Timer from "./components/Timer";
+import Stopwatch from "./components/Stopwatch";
 
-function App() {
+export default function App() {
   return (
     <div>
       <nav className="navbar">
-        <div className="logo">
-          <i className="fas fa-clock"></i>
-          Timer & Stopwatch
+        <h1>Timer & Stopwatch</h1>
+        <div>
+          <Link to="/" className="nav-link">Timer</Link>
+          <Link to="/stopwatch" className="nav-link">Stopwatch</Link>
         </div>
-        <ul className="nav-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="https://vip007vishal.github.io/Timer-Stopwatch/Login.html">Login</a></li>
-        </ul>
       </nav>
-      <main className="main-content">
-        <h1>Timer & Stopwatch Tools</h1>
-        <div className="tools-container">
-          <div className="tool"><Timer /></div>
-          <div className="tool"><Stopwatch /></div>
-        </div>
-      </main>
+      <Routes>
+        <Route path="/" element={<Timer />} />
+        <Route path="/stopwatch" element={<Stopwatch />} />
+      </Routes>
     </div>
   );
 }
-
-export default App;

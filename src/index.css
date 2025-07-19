@@ -1,42 +1,63 @@
 body {
-  margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-  color: #2c3e50;
-  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2f3, #8e9eab);
+  margin: 0;
+  padding: 0;
 }
 
 .navbar {
+  background-color: #fff;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
-  padding: 1rem 2rem;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-links li a {
+.nav-link {
+  margin-left: 1rem;
   text-decoration: none;
-  color: #2c3e50;
+  color: #0077ff;
+  font-weight: 500;
 }
 
-.main-content {
-  padding: 4rem 2rem;
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.box {
+  background: white;
+  max-width: 400px;
+  margin: 5rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.tools-container {
-  display: flex;
-  justify-content: space-around;
-  padding: 2rem;
+.time {
+  font-size: 3rem;
+  margin: 1rem 0;
 }
 
-.tool {
-  flex: 1;
-  margin: 0 1rem;
+input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.buttons button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #0077ff;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background: #005fcc;
 }
