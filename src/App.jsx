@@ -13,6 +13,7 @@ function App() {
         </div>
         <ul className="nav-links">
           <li><a href="/">Home</a></li>
+          <li><a href="https://vip007vishal.github.io/Timer-Stopwatch/Login.html">Login</a></li>
         </ul>
       </nav>
       <main className="main-content">
