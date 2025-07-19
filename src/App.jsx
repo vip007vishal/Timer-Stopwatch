@@ -1,18 +1,27 @@
 import React from 'react';
-import Stopwatch from './Stopwatch';
 import Timer from './Timer';
+import Stopwatch from './Stopwatch';
+import './index.css';
 
 function App() {
   return (
-    <div className="container">
-      <div className="box">
-        <h2>Countdown Timer</h2>
-        <Timer />
-      </div>
-      <div className="box">
-        <h2>Stopwatch</h2>
-        <Stopwatch />
-      </div>
+    <div>
+      <nav className="navbar">
+        <div className="logo">
+          <i className="fas fa-clock"></i>
+          Timer & Stopwatch
+        </div>
+        <ul className="nav-links">
+          <li><a href="/">Home</a></li>
+        </ul>
+      </nav>
+      <main className="main-content">
+        <h1>Timer & Stopwatch Tools</h1>
+        <div className="tools-container">
+          <div className="tool"><Timer /></div>
+          <div className="tool"><Stopwatch /></div>
+        </div>
+      </main>
     </div>
   );
 }
