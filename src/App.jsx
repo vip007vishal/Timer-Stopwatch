@@ -1,6 +1,8 @@
 import React from "react";
 import Timer from "./components/Timer";
 import Stopwatch from "./components/Stopwatch";
+import './navbar.css';
+
 
 const App = () => {
   return (
