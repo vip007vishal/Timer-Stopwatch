@@ -13,11 +13,11 @@ const App = () => {
       {/* Main Content */}
       <main className="flex flex-col md:flex-row justify-center items-center gap-12 p-10">
         <div className="w-full md:w-1/2 bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-2xl font-semibold text-blue-600 mb-4 text-center">Timer</h2>
+          <h2 className="text-2xl font-semibold text-blue-600 mb-4 text-center timer">Timer</h2>
           <Timer />
         </div>
         <div className="w-full md:w-1/2 bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-2xl font-semibold text-blue-600 mb-4 text-center">Stopwatch</h2>
+          <h2 className="text-2xl font-semibold text-blue-600 mb-4 text-center stopwatch">Stopwatch</h2>
           <Stopwatch />
         </div>
       </main>
